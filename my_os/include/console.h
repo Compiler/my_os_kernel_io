@@ -30,7 +30,7 @@ static int _console_color = CONSOLE_COLOR_DEFAULT;
 static char* const VGA_MEMORY = (char*) 0xb8000;
 static const int VGA_WIDTH =    80;
 static const int VGA_HEIGHT=    25;
-
+#define LAST_POS VGA_WIDTH * VGA_HEIGHT * BYTES_PER_CHAR;
 extern unsigned int _position;
 
 

@@ -16,6 +16,7 @@ void new_line(){
     _position = (2 * ((_position/2) + (VGA_WIDTH - ((_position/2) % VGA_WIDTH))));
 }
 void print_character(char character){
+    if(_position >= VGA_HEIGHT * VGA_WIDTH * BYTES_PER_CHAR) shift();
     if(character == '\n'){
             new_line();
             return;
