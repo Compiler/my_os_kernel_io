@@ -8,7 +8,7 @@ void shift(){
     for(int pos = 0; pos < (VGA_WIDTH * VGA_HEIGHT * BYTES_PER_CHAR) - (VGA_WIDTH * BYTES_PER_CHAR); pos++){
         VGA_MEMORY[pos] = VGA_MEMORY[pos + VGA_WIDTH * BYTES_PER_CHAR];
     }
-
+    _position = VGA_HEIGHT * VGA_WIDTH * BYTES_PER_CHAR - (VGA_WIDTH * BYTES_PER_CHAR); //reposition to last line
 
 }
 
