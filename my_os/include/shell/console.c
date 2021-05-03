@@ -9,6 +9,7 @@ void shift(){
         VGA_MEMORY[pos] = VGA_MEMORY[pos + VGA_WIDTH * BYTES_PER_CHAR];
     }
     _position = VGA_HEIGHT * VGA_WIDTH * BYTES_PER_CHAR - (VGA_WIDTH * BYTES_PER_CHAR); //reposition to last line
+    for(int i = 0; i < VGA_WIDTH; i+=2) VGA_MEMORY[_position + i] = '\0';
 
 }
 
